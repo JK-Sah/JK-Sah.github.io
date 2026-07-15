@@ -1,0 +1,292 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>J.K. Sah — Mechanical Engineering PhD, RIT</title>
+<meta
+  name="description"
+  content="J.K. Sah — PhD student in Mechanical Engineering at Rochester Institute of Technology. Research in bio-inspired design, fluid–structure interaction, machine learning, and sensor design at the Flow Physics and Modeling Lab."
+/>
+<meta name="author" content="J.K. Sah" />
+
+<!-- Open Graph / social preview -->
+<meta property="og:title" content="J.K. Sah — Mechanical Engineering PhD, RIT" />
+<meta
+  property="og:description"
+  content="PhD student in Mechanical Engineering at RIT. Bio-inspired design, fluid–structure interaction, AI, and sensor design."
+/>
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="styles.css" />
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#home" class="nav__brand">
+      <span class="nav__brand-mark">JK</span>
+      <span class="nav__brand-name">J.K. Sah</span>
+    </a>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#publications">Publications</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="assets/cv.pdf" class="nav__cv" target="_blank" rel="noopener">CV</a>
+    </nav>
+
+    <div class="nav__actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <button class="icon-btn nav__burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="home">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <p class="hero__eyebrow">PhD Student · Mechanical Engineering</p>
+        <h1 class="hero__name">J.K. Sah</h1>
+        <p class="hero__tagline">
+          Exploring <strong>bio-inspired design</strong>,
+          <strong>fluid–structure interaction</strong>, and
+          <strong>machine-learning-aided modeling</strong> of the sensors and
+          structures nature engineered first.
+        </p>
+        <p class="hero__affil">
+          Graduate Research Assistant ·
+          <a href="https://www.rit.edu/fpml/" target="_blank" rel="noopener">Flow Physics &amp; Modeling Lab</a>
+          · <a href="https://www.rit.edu/" target="_blank" rel="noopener">Rochester Institute of Technology</a>
+        </p>
+
+        <div class="hero__cta">
+          <a href="#research" class="btn btn--primary">View Research</a>
+          <a href="assets/cv.pdf" class="btn btn--ghost" target="_blank" rel="noopener">Download CV</a>
+        </div>
+
+        <ul class="social" aria-label="Social links">
+          <li><a href="mailto:js8472@rit.edu" title="Email" aria-label="Email">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </a></li>
+          <li><a href="https://github.com/JK-Sah" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.4-1.27.73-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.05.78 2.12v3.14c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
+          </a></li>
+          <li><a href="#" data-placeholder="Google Scholar" title="Google Scholar" aria-label="Google Scholar">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v3.5L12 20l7-3.32v-3.5L12 17l-7-3.82z"/></svg>
+          </a></li>
+          <li><a href="#" data-placeholder="LinkedIn" title="LinkedIn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.24 8h4.5v12H.24V8zm7.5 0h4.3v1.64h.06c.6-1.06 2.06-2.18 4.24-2.18 4.54 0 5.38 2.86 5.38 6.58V20h-4.5v-5.28c0-1.26-.02-2.88-1.76-2.88-1.76 0-2.03 1.37-2.03 2.79V20h-4.5V8z"/></svg>
+          </a></li>
+          <li><a href="#" data-placeholder="ORCID" title="ORCID" aria-label="ORCID">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zM8.5 7.4a1.1 1.1 0 1 1 0-2.2 1.1 1.1 0 0 1 0 2.2zm.9 10.5H7.6V8.9h1.8v9zM12 8.9h3.5c3.3 0 4.8 2.4 4.8 4.5 0 2.3-1.8 4.5-4.8 4.5H12v-9zm1.8 1.6v5.8h1.6c2.3 0 2.9-1.7 2.9-2.9 0-1.9-1.2-2.9-3-2.9h-1.5z"/></svg>
+          </a></li>
+        </ul>
+      </div>
+
+      <div class="hero__photo">
+        <div class="photo-frame">
+          <img src="assets/profile.jpg" alt="J.K. Sah" onerror="this.style.display='none';this.parentElement.classList.add('photo-frame--empty')" />
+          <span class="photo-frame__placeholder">Add <code>assets/profile.jpg</code></span>
+        </div>
+        <div class="photo-badge">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          Kate Gleason College of Engineering
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__num">01</span>
+        <h2>About</h2>
+      </div>
+      <div class="about">
+        <div class="about__lead">
+          <p>
+            I'm a <strong>first-year PhD student in Mechanical Engineering</strong> at
+            <a href="https://www.rit.edu/" target="_blank" rel="noopener">Rochester Institute of Technology</a>,
+            working as a Graduate Research Assistant in the
+            <a href="https://www.rit.edu/fpml/" target="_blank" rel="noopener">Flow Physics &amp; Modeling Lab (FPML)</a>
+            under the supervision of
+            <a href="https://www.rit.edu/directory/qxxeme-qian-xue" target="_blank" rel="noopener">Prof. Qian Xue</a>.
+          </p>
+          <p>
+            My work sits at the intersection of <strong>fluid mechanics</strong>,
+            <strong>bio-inspired engineering</strong>, and <strong>artificial intelligence</strong> —
+            using computational modeling and machine learning to understand how
+            biological systems sense and move through fluids, and translating those
+            principles into engineered sensors and designs.
+          </p>
+        </div>
+        <aside class="about__facts">
+          <dl>
+            <div><dt>Program</dt><dd>PhD, Mechanical Engineering</dd></div>
+            <div><dt>Institution</dt><dd>Rochester Institute of Technology</dd></div>
+            <div><dt>Lab</dt><dd>Flow Physics &amp; Modeling Lab</dd></div>
+            <div><dt>Advisor</dt><dd>Prof. Qian Xue</dd></div>
+            <div><dt>Location</dt><dd>Rochester, New York</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RESEARCH ===================== -->
+  <section class="section section--alt" id="research">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__num">02</span>
+        <h2>Research Interests</h2>
+      </div>
+      <p class="section__intro">
+        Passive and active fluid–structure–acoustics interaction, neuromuscular
+        biomechanics, and machine-learning-aided modeling of complex biological flows.
+      </p>
+      <div class="cards">
+        <article class="card">
+          <div class="card__icon">🐋</div>
+          <h3>Bio-Inspired Design</h3>
+          <p>Learning from nature's sensors and structures — like seal whiskers — to design engineered systems that detect and adapt to their fluid environment.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon">🌊</div>
+          <h3>Fluid–Structure Interaction</h3>
+          <p>Modeling how deformable structures and surrounding flows couple and exchange energy, from vortex-induced vibration to flow sensing.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon">🧠</div>
+          <h3>Machine Learning for Physics</h3>
+          <p>Physics-informed and operator-learning methods (e.g., DeepONets) to accelerate and enrich high-fidelity simulation of multiphysics systems.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon">📡</div>
+          <h3>Sensor Design</h3>
+          <p>Bio-inspired flow and acoustic sensing — translating biological sensing strategies into robust, real-world sensor arrays.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__num">03</span>
+        <h2>Projects</h2>
+      </div>
+      <div class="projects">
+        <a class="project" href="https://github.com/JK-Sah/flowsnn" target="_blank" rel="noopener">
+          <div class="project__top">
+            <h3>flowsnn</h3>
+            <span class="project__lang"><span class="dot dot--py"></span>Python</span>
+          </div>
+          <p>Neural-network modeling for flow physics — learning-based surrogates for fluid dynamics problems.</p>
+          <span class="project__link">View on GitHub →</span>
+        </a>
+        <a class="project" href="https://github.com/JK-Sah/spectral-pideeponet-elasticity" target="_blank" rel="noopener">
+          <div class="project__top">
+            <h3>spectral-pideeponet-elasticity</h3>
+            <span class="project__lang"><span class="dot dot--py"></span>Python</span>
+          </div>
+          <p>Spectral physics-informed DeepONet for elasticity problems — operator learning applied to structural mechanics.</p>
+          <span class="project__link">View on GitHub →</span>
+        </a>
+      </div>
+      <p class="projects__more">
+        More on <a href="https://github.com/JK-Sah" target="_blank" rel="noopener">github.com/JK-Sah</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== PUBLICATIONS ===================== -->
+  <section class="section section--alt" id="publications">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__num">04</span>
+        <h2>Publications</h2>
+      </div>
+      <ol class="pubs">
+        <li class="pub pub--placeholder">
+          <p class="pub__title">Your publications will appear here.</p>
+          <p class="pub__meta">Add entries as your work is published — journal, authors, year, and links to PDF / DOI / code.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===================== NEWS ===================== -->
+  <section class="section" id="news">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__num">05</span>
+        <h2>News</h2>
+      </div>
+      <ul class="timeline">
+        <li class="timeline__item">
+          <span class="timeline__date">Aug 2025</span>
+          <p>Started my PhD in Mechanical Engineering at RIT, joining the Flow Physics &amp; Modeling Lab as a Graduate Research Assistant.</p>
+        </li>
+        <li class="timeline__item timeline__item--muted">
+          <span class="timeline__date">Coming soon</span>
+          <p>Add conference talks, papers, awards, and milestones here as they happen.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="section section--alt" id="contact">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__num">06</span>
+        <h2>Get in Touch</h2>
+      </div>
+      <div class="contact">
+        <p class="contact__lead">
+          Interested in bio-inspired design, fluid–structure interaction, or
+          ML-aided modeling? I'd be glad to connect.
+        </p>
+        <div class="contact__links">
+          <a class="contact__card" href="mailto:js8472@rit.edu">
+            <span class="contact__label">Email</span>
+            <span class="contact__val">js8472@rit.edu</span>
+          </a>
+          <a class="contact__card" href="https://github.com/JK-Sah" target="_blank" rel="noopener">
+            <span class="contact__label">GitHub</span>
+            <span class="contact__val">@JK-Sah</span>
+          </a>
+          <a class="contact__card" href="https://www.rit.edu/fpml/" target="_blank" rel="noopener">
+            <span class="contact__label">Lab</span>
+            <span class="contact__val">Flow Physics &amp; Modeling Lab</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <p>© <span id="year"></span> J.K. Sah</p>
+    <p class="footer__note">Built with plain HTML &amp; CSS · Hosted on GitHub Pages</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
