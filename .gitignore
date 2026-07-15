@@ -13,3 +13,6 @@
 
 # Logs
 *.log
+
+# Source image originals (the served .jpg is committed instead)
+*.heic
