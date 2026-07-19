@@ -16,3 +16,6 @@
 
 # Source image originals (the served .jpg is committed instead)
 *.heic
+
+# Local editor/agent config
+.claude/
