@@ -11,7 +11,6 @@
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{microtype}
-\usepackage{needspace}
 \usepackage[colorlinks=true]{hyperref}
 
 \definecolor{ink}{HTML}{1B3A66}
@@ -33,11 +32,13 @@
 % \entry{title}{dates}{organization}{location}
 \newcommand{\entry}[4]{\textbf{#1}\hfill #2\par\textit{#3}\hfill\textit{#4}\par}
 % Sub-heading inside Publications
-% (\needspace keeps a sub-heading on the same page as its first reference)
-\newcommand{\pubgroup}[1]{\par\needspace{4\baselineskip}\vspace{2pt}{\small\bfseries\color{ink}#1}\par\nopagebreak\vspace{1pt}}
+% (\nopagebreak here and beginpenalty below keep a sub-heading with its first reference)
+\newcommand{\pubgroup}[1]{\par\vspace{2pt}{\small\bfseries\color{ink}#1}\par\nopagebreak\vspace{1pt}}
 % (\interlinepenalty keeps each reference on one page)
-\newenvironment{publist}{\interlinepenalty=10000\begin{enumerate}[leftmargin=1.5em,label=\arabic*.,itemsep=3pt,topsep=2pt,parsep=0pt]}{\end{enumerate}}
+\newenvironment{publist}{\interlinepenalty=10000\begin{enumerate}[leftmargin=1.5em,label=\arabic*.,itemsep=3pt,topsep=2pt,parsep=0pt,beginpenalty=10000]}{\end{enumerate}}
 \newcommand{\me}{\textbf{Sah, J.\,K.}}
+% \talk{type}{venue}{date}{title}
+\newcommand{\talk}[4]{\textbf{#1}\enspace$|$\enspace #2\hfill #3\par\nopagebreak\hspace*{1.2em}\textit{#4}\par\vspace{3pt}}
 \newcommand{\dotsep}{\nobreak\hspace{0.5em}$\cdot$\hspace{0.5em}\ignorespaces}
 
 \begin{document}
@@ -64,7 +65,7 @@
 \section*{Education}
 \entry{Ph.D., Mechanical Engineering}{Jan 2026 -- Present}{Rochester Institute of Technology, Kate Gleason College of Engineering}{Rochester, NY}
 \begin{itemize}
-  \item \textbf{GPA:} 4.0/4.0
+  \item \textbf{GPA:} 4.0/4.0 (to date)
   \item \textbf{Research project:} \textit{From Nature to Prototype: Development of a Bio-Inspired Seal Whisker Sensor Array}
   \item \textbf{Coursework:} Computational Methods in Fluid Dynamics, Continuum Mechanics, Advanced Engineering Mathematics, Engineering Analysis, Interdisciplinary Research Methods, Translating Discovery into Practice, Doctoral Seminar
 \end{itemize}
@@ -74,17 +75,6 @@
   \item \textbf{Thesis:} Study of the energy scenario and improvement opportunities of the ICT building, Pulchowk Campus.
 \end{itemize}
 \vspace{2pt}\textbf{English proficiency:} IELTS 7.0/9.0\par
-
-% ---------------------------------------------------------------- Technical Skills
-\section*{Technical Skills}
-\begin{itemize}
-  \item \textbf{Programming \& Data:} Python, MATLAB; signal processing (FFT, spectral analysis); machine learning (neural operators).
-  \item \textbf{Simulation \& Modeling:} CFD and fluid-structure interaction (ANSYS CFX/Fluent, immersed-boundary methods); finite element method; reduced-order models.
-  \item \textbf{Experiments \& Instrumentation:} towing-tank testing, strain-gauge sensors, SPI sensor interfacing, ESP32 firmware, PCB debugging, oscilloscope / multimeter benchtop testing.
-  \item \textbf{Thermal \& Energy:} building and industrial energy audits; EnergyPlus, LEAP, PVsyst.
-  \item \textbf{CAD:} SOLIDWORKS, AutoCAD, SketchUp (3D modeling and drafting).
-  \item \textbf{General:} LaTeX, Git; experimental design, data analysis, and technical writing.
-\end{itemize}
 
 % ---------------------------------------------------------------- Research Experience
 \section*{Research Experience}
@@ -112,7 +102,6 @@
 \end{itemize}
 
 % ---------------------------------------------------------------- Publications
-\needspace{6\baselineskip}% keep the heading with its first reference
 \section*{Publications}
 \pubgroup{Peer-Reviewed Journal Articles}
 \begin{publist}
@@ -141,13 +130,22 @@
   \item \textbf{EV Cost-Competitiveness Model (Kathmandu Valley).} MATLAB lifetime-cost model showing 40\% lower cost for converted EVs vs.\ new ICE vehicles at 10{,}000\,km/yr.
 \end{itemize}
 
+% ---------------------------------------------------------------- Technical Skills
+\section*{Technical Skills}
+\begin{itemize}
+  \item \textbf{Programming \& Data:} Python, MATLAB; signal processing (FFT, spectral analysis); machine learning (neural operators).
+  \item \textbf{Simulation \& Modeling:} CFD and fluid-structure interaction (ANSYS CFX/Fluent, immersed-boundary methods); finite element method; reduced-order models.
+  \item \textbf{Experiments \& Instrumentation:} towing-tank testing, strain-gauge sensors, SPI sensor interfacing, ESP32 firmware, PCB debugging, oscilloscope / multimeter benchtop testing.
+  \item \textbf{Thermal \& Energy:} building and industrial energy audits; EnergyPlus, LEAP, PVsyst.
+  \item \textbf{CAD:} SOLIDWORKS, AutoCAD, SketchUp (3D modeling and drafting).
+  \item \textbf{General:} LaTeX, Git; experimental design, data analysis, and technical writing.
+\end{itemize}
+
 % ---------------------------------------------------------------- Talks
 \section*{Talks and Presentations}
-\begin{itemize}
-  \item \textbf{Oral presentation:} ``From Nature to Prototype: Development of a Bio-Inspired Seal Whisker Sensor Array,'' 2026 RIT Graduate Showcase. \hfill Apr 2026
-  \item \textbf{Exhibitor:} ``From Nature to Prototype: Seal Whisker Sensors,'' Imagine RIT. \hfill Apr 2026
-  \item \textbf{Poster:} ``Effects of blade exit angle on the performance of a centrifugal pump,'' VETOMAC 2022, Tribhuvan University, Nepal. \hfill Dec 2022
-\end{itemize}
+\talk{Oral presentation}{2026 RIT Graduate Showcase, Rochester, NY}{Apr 2026}{From Nature to Prototype: Development of a Bio-Inspired Seal Whisker Sensor Array}
+\talk{Exhibit}{Imagine RIT, Rochester, NY}{Apr 2026}{From Nature to Prototype: Seal Whisker Sensors}
+\talk{Poster}{VETOMAC 2022, Tribhuvan University, Nepal}{Dec 2022}{Effects of Blade Exit Angle on the Performance of a Centrifugal Pump}
 
 % ---------------------------------------------------------------- Honors
 \section*{Honors and Awards}
