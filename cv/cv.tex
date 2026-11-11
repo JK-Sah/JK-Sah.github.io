@@ -38,6 +38,7 @@
 % (\interlinepenalty keeps each reference on one page)
 \newenvironment{publist}{\interlinepenalty=10000\begin{enumerate}[leftmargin=1.5em,label=\arabic*.,itemsep=3pt,topsep=2pt,parsep=0pt]}{\end{enumerate}}
 \newcommand{\me}{\textbf{Sah, J.\,K.}}
+\newcommand{\dotsep}{\nobreak\hspace{0.5em}$\cdot$\hspace{0.5em}\ignorespaces}
 
 \begin{document}
 
@@ -56,35 +57,42 @@
 
 % ---------------------------------------------------------------- Research Interests
 \section*{Research Interests}
-Fluid--structure interaction and scientific machine learning, through experiments and computation. A question that runs through my work: once every cost is counted, does a new method actually beat a well-tuned classical one?
-\begin{itemize}
-  \item \textbf{Scientific machine learning for mechanics:} neural operators (DeepONet, FNO) benchmarked against FEM and reduced-order models; phase drift in neural surrogates of oscillatory flows; spiking networks for low-energy sensing.
-  \item \textbf{Experimental fluid--structure interaction and bio-inspired sensing:} seal-whisker and lateral-line-inspired sensor arrays, embedded data acquisition, towing-tank experiments, and learned decoders for wake detection and tracking.
-  \item \textbf{Sustainable engineering:} life-cycle assessment of CO\textsubscript{2} mineralization in concrete; building and industrial energy audits.
-\end{itemize}
+% (\mbox keeps each topic whole; \dotsep allows a line break only after the dot)
+{\raggedright\mbox{Thermal and fluid sciences}\dotsep \mbox{Fluid-structure interaction}\dotsep \mbox{Bio-inspired flow sensing}\dotsep \mbox{Computational mechanics}\dotsep \mbox{Sustainable energy and materials}\par}
 
 % ---------------------------------------------------------------- Education
 \section*{Education}
 \entry{Ph.D., Mechanical Engineering}{Jan 2026 -- Present}{Rochester Institute of Technology, Kate Gleason College of Engineering}{Rochester, NY}
 \begin{itemize}
-  \item \textbf{Advisor:} Dr. Qian Xue \enspace$|$\enspace Flow Physics and Modeling Lab
-  \item \textbf{Dissertation:} \textit{From Nature to Prototype: Development of a Bio-Inspired Seal Whisker Sensor Array}
-  \item \textbf{Coursework:} Engineering Analysis, Continuum Mechanics, Translating Discovery into Practice, Doctoral Seminar
+  \item \textbf{GPA:} 4.0/4.0
+  \item \textbf{Research project:} \textit{From Nature to Prototype: Development of a Bio-Inspired Seal Whisker Sensor Array}
+  \item \textbf{Coursework:} Computational Methods in Fluid Dynamics, Continuum Mechanics, Advanced Engineering Mathematics, Engineering Analysis, Interdisciplinary Research Methods, Translating Discovery into Practice, Doctoral Seminar
 \end{itemize}
 \entry{B.E., Mechanical Engineering}{Nov 2018 -- Apr 2023}{Pulchowk Campus, Institute of Engineering, Tribhuvan University}{Kathmandu, Nepal}
 \begin{itemize}
-  \item Recipient of a merit-based full scholarship for undergraduate study.
+  \item \textbf{Overall score:} 76.36/100; merit-based full scholarship for undergraduate study.
   \item \textbf{Thesis:} Study of the energy scenario and improvement opportunities of the ICT building, Pulchowk Campus.
+\end{itemize}
+\vspace{2pt}\textbf{English proficiency:} IELTS 7.0/9.0\par
+
+% ---------------------------------------------------------------- Technical Skills
+\section*{Technical Skills}
+\begin{itemize}
+  \item \textbf{Programming \& Data:} Python, MATLAB; signal processing (FFT, spectral analysis); machine learning (neural operators).
+  \item \textbf{Simulation \& Modeling:} CFD and fluid-structure interaction (ANSYS CFX/Fluent, immersed-boundary methods); finite element method; reduced-order models.
+  \item \textbf{Experiments \& Instrumentation:} towing-tank testing, strain-gauge sensors, SPI sensor interfacing, ESP32 firmware, PCB debugging, oscilloscope / multimeter benchtop testing.
+  \item \textbf{Thermal \& Energy:} building and industrial energy audits; EnergyPlus, LEAP, PVsyst.
+  \item \textbf{CAD:} SOLIDWORKS, AutoCAD, SketchUp (3D modeling and drafting).
+  \item \textbf{General:} LaTeX, Git; experimental design, data analysis, and technical writing.
 \end{itemize}
 
 % ---------------------------------------------------------------- Research Experience
 \section*{Research Experience}
-\entry{Graduate Research Assistant}{Jan 2026 -- Present}{Flow Physics and Modeling Lab, Rochester Institute of Technology}{Rochester, NY}
-{\small\itshape NRL-funded project on bio-inspired seal-whisker sensor arrays for autonomous underwater detection and tracking (U.S.\ Naval Research Laboratory; PIs: Dr.\ Xudong Zheng and Dr.\ Qian Xue).\par}
+\entry{Graduate Research Assistant}{Jan 2026 -- Present}{Department of Mechanical Engineering, Rochester Institute of Technology}{Rochester, NY}
 \begin{itemize}
-  \item Built and brought up a \textbf{32-channel whisker-array data-acquisition system} (24-bit $\Delta\Sigma$ ADCs over SPI); released it as a \textbf{Python package} for synchronized logging and visualization.
-  \item Developed \textbf{CNN--LSTM models} mapping multi-channel whisker-deflection signals to hydrodynamic motion state for wake-based object localization and tracking.
-  \item Characterized \textbf{whisker--wake interaction} in towing-tank experiments and built a frequency-domain pipeline separating whisker self-vibration from wake-induced forcing.
+  \item Ran \textbf{towing-tank experiments} with a 9-sensor seal-whisker array on a moving carriage behind an independently towed cylinder (Re = 4000, 6000 and 8000); the measured shedding frequency scaled linearly with tow speed.
+  \item Repaired a \textbf{32-channel sensor board} and rewrote its ESP32 firmware, recovering 14 of 16 whisker sensors.
+  \item Assembled and ballasted a \textbf{BlueROV2} as the underwater test vehicle and ran its first towing-tank tests.
 \end{itemize}
 \entry{Research Assistant}{Apr 2023 -- Mar 2024}{Center for Energy Studies, Institute of Engineering, Tribhuvan University}{Lalitpur, Nepal}
 \begin{itemize}
@@ -104,6 +112,7 @@ Fluid--structure interaction and scientific machine learning, through experiment
 \end{itemize}
 
 % ---------------------------------------------------------------- Publications
+\needspace{6\baselineskip}% keep the heading with its first reference
 \section*{Publications}
 \pubgroup{Peer-Reviewed Journal Articles}
 \begin{publist}
@@ -125,31 +134,19 @@ Fluid--structure interaction and scientific machine learning, through experiment
   \item \me, \& Paudel, A. (2023). Cost Analysis of Owning Four-Wheel Electric Vehicles in Nepal. \textit{International Conference on Engineering \& Technology}, Vol.~5, KEC, 112--116.
 \end{publist}
 
-% ---------------------------------------------------------------- Technical Skills
-\section*{Technical Skills}
-\begin{itemize}
-  \item \textbf{Programming \& ML:} Python (PyTorch, NumPy, SciPy, scikit-learn), MATLAB; physics-informed neural networks, DeepONet / neural operators, reinforcement learning (SAC).
-  \item \textbf{Simulation \& Modeling:} Fluid--structure interaction, CFD, immersed-boundary methods; ANSYS (CFX/Fluent).
-  \item \textbf{Embedded \& Instrumentation:} SPI sensor interfacing, 24-bit $\Delta\Sigma$ ADC bring-up, PCB debugging, oscilloscope / multimeter benchtop testing, DAQ system design.
-  \item \textbf{CAD \& Engineering Tools:} SOLIDWORKS, AutoCAD, SketchUp; EnergyPlus, LEAP, PVsyst (energy modeling).
-  \item \textbf{General:} LaTeX, Git, Linux; experimental design, data analysis, and technical writing.
-\end{itemize}
-
 % ---------------------------------------------------------------- Selected Projects
 \section*{Selected Projects}
 \begin{itemize}
-  \item \textbf{Whisker-Sensor Autonomous Underwater Vehicle --- Continuity of RIT MSD P25937.} Continuing an undergraduate senior-design handoff (32-channel acquisition PCB, whisker array, and shroud prototype); developing the Python logging/visualization package and advancing the remaining sensing-to-autonomous-navigation work toward a functional underwater vehicle.
-  \item \textbf{Physics-Informed DeepONet for 2D Linear Elasticity.} Developed an operator-learning surrogate predicting displacement/stress fields for static linear elasticity, packaged as a standalone study.
-  \item \textbf{Industrial Energy Audit --- Dairy Development Corporation, Kathmandu.} Proposed an integrated recovery system: 138\,KVA/month demand reduction via power-factor correction (0.67$\rightarrow$0.98) and 15\% boiler-fuel savings through insulated cladding (2-month payback).
+  \item \textbf{Industrial Energy Audit, Dairy Development Corporation, Kathmandu.} Proposed an integrated recovery system: 138\,KVA/month demand reduction via power-factor correction (0.67$\rightarrow$0.98) and 15\% boiler-fuel savings through insulated cladding (2-month payback).
   \item \textbf{EV Cost-Competitiveness Model (Kathmandu Valley).} MATLAB lifetime-cost model showing 40\% lower cost for converted EVs vs.\ new ICE vehicles at 10{,}000\,km/yr.
 \end{itemize}
 
 % ---------------------------------------------------------------- Talks
 \section*{Talks and Presentations}
 \begin{itemize}
-  \item \textbf{Oral Presentation} --- ``From Nature to Prototype: Development of a Bio-Inspired Seal Whisker Sensor Array,'' 2026 RIT Graduate Showcase. \hfill Apr 2026
-  \item \textbf{Exhibitor} --- ``From Nature to Prototype: Seal Whisker Sensors,'' Imagine RIT. \hfill Apr 2026
-  \item \textbf{Poster} --- ``Effects of blade exit angle on the performance of a centrifugal pump,'' VETOMAC 2022, Tribhuvan University, Nepal. \hfill Dec 2022
+  \item \textbf{Oral presentation:} ``From Nature to Prototype: Development of a Bio-Inspired Seal Whisker Sensor Array,'' 2026 RIT Graduate Showcase. \hfill Apr 2026
+  \item \textbf{Exhibitor:} ``From Nature to Prototype: Seal Whisker Sensors,'' Imagine RIT. \hfill Apr 2026
+  \item \textbf{Poster:} ``Effects of blade exit angle on the performance of a centrifugal pump,'' VETOMAC 2022, Tribhuvan University, Nepal. \hfill Dec 2022
 \end{itemize}
 
 % ---------------------------------------------------------------- Honors
@@ -160,6 +157,7 @@ Merit-Based Full Scholarship for Undergraduate Study \hfill Nov 2018 -- Apr 2023
 % ---------------------------------------------------------------- Service
 \section*{Professional Service, Leadership \& Outreach}
 \begin{itemize}
+  \item \textbf{Reviewer}, \textit{International Journal of Concrete Structures and Materials} (Springer).
   \item \textbf{Reviewer}, \textit{Journal of Building Engineering} (Elsevier).
   \item \textbf{President}, Saraswati Pooja Committee, NTBNS, IOE Pulchowk Campus (2022--2023).
   \item \textbf{Exhibition Coordinator}, 13th National Mechanical and Aerospace Engineering Exhibition, SOMAES (2022--2023).
