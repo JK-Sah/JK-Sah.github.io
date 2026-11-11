@@ -19,3 +19,10 @@
 
 # Local editor/agent config
 .claude/
+
+# CV build output (cv/cv.tex -> assets/cv.pdf)
+cv/build/
+cv/*.aux
+cv/*.fls
+cv/*.fdb_latexmk
+cv/*.out

@@ -13,8 +13,18 @@ JK-Sah.github.io/
 ├── script.js         # Theme toggle, mobile nav, scroll reveal, active-link spy
 ├── assets/
 │   ├── profile.jpg   # ← add your photo here (4:5 portrait works best)
-│   └── cv.pdf        # ← add your CV here (linked from the nav "CV" button)
+│   └── cv.pdf        # CV (linked from the nav "CV" button), built from cv/cv.tex
+├── cv/
+│   └── cv.tex        # LaTeX source of the CV
 └── README.md
+```
+
+## Updating the CV
+
+Edit `cv/cv.tex`, then rebuild and copy the PDF into `assets/`:
+
+```bash
+cd cv && latexmk -pdf -outdir=build cv.tex && cp build/cv.pdf ../assets/cv.pdf
 ```
 
 ## Editing content

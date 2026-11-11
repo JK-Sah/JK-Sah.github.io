@@ -1,0 +1,168 @@
+% CV of Janu Kumar (J.K.) Sah
+% Build:  latexmk -pdf -outdir=build cv.tex   then copy build/cv.pdf to ../assets/cv.pdf
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{charter}
+\usepackage[scaled=0.95]{helvet}
+\usepackage[letterpaper,left=0.6in,right=0.6in,top=0.4in,bottom=0.5in]{geometry}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{needspace}
+\usepackage[colorlinks=true]{hyperref}
+
+\definecolor{ink}{HTML}{1B3A66}
+\definecolor{rulecol}{HTML}{A9B8CC}
+\definecolor{linkcol}{HTML}{2A5590}
+\hypersetup{urlcolor=linkcol,linkcolor=linkcol,
+  pdftitle={Janu Kumar (J.K.) Sah - CV},pdfauthor={J.K. Sah}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\pagestyle{plain}
+
+% Section headings: blue sans-serif with a light rule underneath
+\titleformat{\section}{\large\sffamily\bfseries\color{ink}}{}{0em}{}[\vspace{-2pt}{\color{rulecol}\titlerule}]
+\titlespacing*{\section}{0pt}{8pt}{3pt}
+
+\setlist[itemize]{leftmargin=1.2em,label=\textbullet,nosep,topsep=1pt}
+
+% \entry{title}{dates}{organization}{location}
+\newcommand{\entry}[4]{\textbf{#1}\hfill #2\par\textit{#3}\hfill\textit{#4}\par}
+% Sub-heading inside Publications
+% (\needspace keeps a sub-heading on the same page as its first reference)
+\newcommand{\pubgroup}[1]{\par\needspace{4\baselineskip}\vspace{2pt}{\small\bfseries\color{ink}#1}\par\nopagebreak\vspace{1pt}}
+% (\interlinepenalty keeps each reference on one page)
+\newenvironment{publist}{\interlinepenalty=10000\begin{enumerate}[leftmargin=1.5em,label=\arabic*.,itemsep=3pt,topsep=2pt,parsep=0pt]}{\end{enumerate}}
+\newcommand{\me}{\textbf{Sah, J.\,K.}}
+
+\begin{document}
+
+% ---------------------------------------------------------------- Header
+\begin{center}
+  {\fontsize{26}{30}\selectfont\sffamily\bfseries\color{ink} Janu Kumar (J.K.) Sah}\par
+  \vspace{6pt}
+  Rochester, New York\enspace$|$\enspace%
+  \href{mailto:js8472@rit.edu}{js8472@rit.edu}\enspace$|$\enspace%
+  \href{https://jk-sah.github.io}{Website}\enspace$|$\enspace%
+  \href{https://www.linkedin.com/in/jk-sah/}{LinkedIn}\enspace$|$\enspace%
+  \href{https://scholar.google.com/citations?user=Iraldw0AAAAJ&hl=en}{Google Scholar}\enspace$|$\enspace%
+  \href{https://github.com/JK-Sah}{GitHub}
+\end{center}
+\vspace{-4pt}
+
+% ---------------------------------------------------------------- Research Interests
+\section*{Research Interests}
+Fluid--structure interaction and scientific machine learning, through experiments and computation. A question that runs through my work: once every cost is counted, does a new method actually beat a well-tuned classical one?
+\begin{itemize}
+  \item \textbf{Scientific machine learning for mechanics:} neural operators (DeepONet, FNO) benchmarked against FEM and reduced-order models; phase drift in neural surrogates of oscillatory flows; spiking networks for low-energy sensing.
+  \item \textbf{Experimental fluid--structure interaction and bio-inspired sensing:} seal-whisker and lateral-line-inspired sensor arrays, embedded data acquisition, towing-tank experiments, and learned decoders for wake detection and tracking.
+  \item \textbf{Sustainable engineering:} life-cycle assessment of CO\textsubscript{2} mineralization in concrete; building and industrial energy audits.
+\end{itemize}
+
+% ---------------------------------------------------------------- Education
+\section*{Education}
+\entry{Ph.D., Mechanical Engineering}{Jan 2026 -- Present}{Rochester Institute of Technology, Kate Gleason College of Engineering}{Rochester, NY}
+\begin{itemize}
+  \item \textbf{Advisor:} Dr. Qian Xue \enspace$|$\enspace Flow Physics and Modeling Lab
+  \item \textbf{Dissertation:} \textit{From Nature to Prototype: Development of a Bio-Inspired Seal Whisker Sensor Array}
+  \item \textbf{Coursework:} Engineering Analysis, Continuum Mechanics, Translating Discovery into Practice, Doctoral Seminar
+\end{itemize}
+\entry{B.E., Mechanical Engineering}{Nov 2018 -- Apr 2023}{Pulchowk Campus, Institute of Engineering, Tribhuvan University}{Kathmandu, Nepal}
+\begin{itemize}
+  \item Recipient of a merit-based full scholarship for undergraduate study.
+  \item \textbf{Thesis:} Study of the energy scenario and improvement opportunities of the ICT building, Pulchowk Campus.
+\end{itemize}
+
+% ---------------------------------------------------------------- Research Experience
+\section*{Research Experience}
+\entry{Graduate Research Assistant}{Jan 2026 -- Present}{Flow Physics and Modeling Lab, Rochester Institute of Technology}{Rochester, NY}
+{\small\itshape NRL-funded project on bio-inspired seal-whisker sensor arrays for autonomous underwater detection and tracking (U.S.\ Naval Research Laboratory; PIs: Dr.\ Xudong Zheng and Dr.\ Qian Xue).\par}
+\begin{itemize}
+  \item Built and brought up a \textbf{32-channel whisker-array data-acquisition system} (24-bit $\Delta\Sigma$ ADCs over SPI); released it as a \textbf{Python package} for synchronized logging and visualization.
+  \item Developed \textbf{CNN--LSTM models} mapping multi-channel whisker-deflection signals to hydrodynamic motion state for wake-based object localization and tracking.
+  \item Characterized \textbf{whisker--wake interaction} in towing-tank experiments and built a frequency-domain pipeline separating whisker self-vibration from wake-induced forcing.
+\end{itemize}
+\entry{Research Assistant}{Apr 2023 -- Mar 2024}{Center for Energy Studies, Institute of Engineering, Tribhuvan University}{Lalitpur, Nepal}
+\begin{itemize}
+  \item Contributed to 25+ solar-monitoring projects and energy audits of industrial sites (Supervisor: Dr.\ Shree Raj Shakya).
+  \item Research focus: national energy-intensity assessment, wind-energy potential for water pumping, and industrial sustainability-index calculation.
+\end{itemize}
+
+% ---------------------------------------------------------------- Professional Experience
+\section*{Professional Experience}
+\entry{Mechanical Design Engineer}{Apr 2024 -- Nov 2025}{Ozaki Design Office}{Niihama City, Japan}
+\begin{itemize}
+  \item Performed CAD design, 3D modeling, and engineering simulation; conducted industrial site visits to study and analyze mechanical components.
+\end{itemize}
+\entry{Intern}{Apr -- May 2022}{Alternative Energy Promotion Center}{Kathmandu, Nepal}
+\begin{itemize}
+  \item Gained hands-on experience in energy auditing and management, renewable energy, and energy policy, regulation, and outreach.
+\end{itemize}
+
+% ---------------------------------------------------------------- Publications
+\section*{Publications}
+\pubgroup{Peer-Reviewed Journal Articles}
+\begin{publist}
+  \item \me{} (2026). When is carbonation-cured concrete actually cleaner? A systematic review, a net-benefit condition framework, and a proposed minimum reporting set for CO\textsubscript{2} mineralization in cement-based products. \textit{Journal of Cleaner Production}, 579, 149605. \href{https://doi.org/10.1016/j.jclepro.2026.149605}{doi:10.1016/j.jclepro.2026.149605}
+  \item Shakya, S.\,R., \me, Bhujel, P., Aryal, H., Bajracharya, T.\,R., Bhandari, R., Subedi, S., \& Chaulagain, B. (2024). Energy intensity improvement potential of the commercial buildings in developing countries: A case study of Nepal. \textit{Journal of Innovations in Engineering Education}, 7(1), 84--95.
+  \item Shakya, S.\,R., Subedi, S., Bajracharya, T.\,R., Shrestha, S.\,L., \me, \& Chaulagain, B. (2025). Sustainability Index for a Manufacturing Industry: A Case Study of Cement Industry in Nepal. \textit{Journal of Science and Engineering}, 12(1), 37--48.
+  \item Shakya, S.\,R., Chaulagain, B., Poudel, S., Subedi, T.\,R., Poudel, P.\,S., Subedi, S., \& \me{} (2025). Computation and Experimental Analysis of Helical Bach-Type Savonius Wind Turbine for Water Pumping Application. \textit{Journal of the Institute of Engineering}, 18(1), 94--101.
+  \item Shah, M.\,P., \& \me{} (2023). Design Optimization of Fins of a Sounding Rocket for Maximum Lift-to-Drag Ratio and Minimum Radar Cross-Section Area Using ANSYS. \textit{International Journal on Engineering Technology}, 1(1), 53--61.
+\end{publist}
+
+\pubgroup{Manuscripts Under Revision}
+\begin{publist}
+  \item \me{} Do neural operators beat classical solvers for linear elasticity? A strong-baseline, full-cost benchmark. \textit{Computational Mechanics} (Springer), under revision.
+\end{publist}
+
+\pubgroup{Peer-Reviewed Conference Proceedings}
+\begin{publist}
+  \item \me, Ghimire, I., Tamang, B., \& Adhikari, N. (2025). CFX Analysis to Study the Effects of Blade Exit Angle on Performance of Centrifugal Pumps. In \textit{Vibration Engineering and Technology of Machinery, Vol.~I (VETOMAC 2022)}, Lecture Notes in Mechanical Engineering. Springer, Singapore.
+  \item \me, \& Paudel, A. (2023). Cost Analysis of Owning Four-Wheel Electric Vehicles in Nepal. \textit{International Conference on Engineering \& Technology}, Vol.~5, KEC, 112--116.
+\end{publist}
+
+% ---------------------------------------------------------------- Technical Skills
+\section*{Technical Skills}
+\begin{itemize}
+  \item \textbf{Programming \& ML:} Python (PyTorch, NumPy, SciPy, scikit-learn), MATLAB; physics-informed neural networks, DeepONet / neural operators, reinforcement learning (SAC).
+  \item \textbf{Simulation \& Modeling:} Fluid--structure interaction, CFD, immersed-boundary methods; ANSYS (CFX/Fluent).
+  \item \textbf{Embedded \& Instrumentation:} SPI sensor interfacing, 24-bit $\Delta\Sigma$ ADC bring-up, PCB debugging, oscilloscope / multimeter benchtop testing, DAQ system design.
+  \item \textbf{CAD \& Engineering Tools:} SOLIDWORKS, AutoCAD, SketchUp; EnergyPlus, LEAP, PVsyst (energy modeling).
+  \item \textbf{General:} LaTeX, Git, Linux; experimental design, data analysis, and technical writing.
+\end{itemize}
+
+% ---------------------------------------------------------------- Selected Projects
+\section*{Selected Projects}
+\begin{itemize}
+  \item \textbf{Whisker-Sensor Autonomous Underwater Vehicle --- Continuity of RIT MSD P25937.} Continuing an undergraduate senior-design handoff (32-channel acquisition PCB, whisker array, and shroud prototype); developing the Python logging/visualization package and advancing the remaining sensing-to-autonomous-navigation work toward a functional underwater vehicle.
+  \item \textbf{Physics-Informed DeepONet for 2D Linear Elasticity.} Developed an operator-learning surrogate predicting displacement/stress fields for static linear elasticity, packaged as a standalone study.
+  \item \textbf{Industrial Energy Audit --- Dairy Development Corporation, Kathmandu.} Proposed an integrated recovery system: 138\,KVA/month demand reduction via power-factor correction (0.67$\rightarrow$0.98) and 15\% boiler-fuel savings through insulated cladding (2-month payback).
+  \item \textbf{EV Cost-Competitiveness Model (Kathmandu Valley).} MATLAB lifetime-cost model showing 40\% lower cost for converted EVs vs.\ new ICE vehicles at 10{,}000\,km/yr.
+\end{itemize}
+
+% ---------------------------------------------------------------- Talks
+\section*{Talks and Presentations}
+\begin{itemize}
+  \item \textbf{Oral Presentation} --- ``From Nature to Prototype: Development of a Bio-Inspired Seal Whisker Sensor Array,'' 2026 RIT Graduate Showcase. \hfill Apr 2026
+  \item \textbf{Exhibitor} --- ``From Nature to Prototype: Seal Whisker Sensors,'' Imagine RIT. \hfill Apr 2026
+  \item \textbf{Poster} --- ``Effects of blade exit angle on the performance of a centrifugal pump,'' VETOMAC 2022, Tribhuvan University, Nepal. \hfill Dec 2022
+\end{itemize}
+
+% ---------------------------------------------------------------- Honors
+\section*{Honors and Awards}
+RIT Ph.D. Merit Scholarship / Graduate Assistantship \hfill Jan 2026 -- Present\par\vspace{2pt}
+Merit-Based Full Scholarship for Undergraduate Study \hfill Nov 2018 -- Apr 2023\par
+
+% ---------------------------------------------------------------- Service
+\section*{Professional Service, Leadership \& Outreach}
+\begin{itemize}
+  \item \textbf{Reviewer}, \textit{Journal of Building Engineering} (Elsevier).
+  \item \textbf{President}, Saraswati Pooja Committee, NTBNS, IOE Pulchowk Campus (2022--2023).
+  \item \textbf{Exhibition Coordinator}, 13th National Mechanical and Aerospace Engineering Exhibition, SOMAES (2022--2023).
+\end{itemize}
+
+\end{document}

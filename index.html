@@ -3,7 +3,7 @@
 <title>J.K. Sah — Mechanical Engineering PhD, RIT</title>
 <meta
   name="description"
-  content="J.K. Sah — PhD student in Mechanical Engineering at Rochester Institute of Technology. Experimental fluid–structure interaction and bio-inspired flow sensing at the Flow Physics & Modeling Lab."
+  content="J.K. Sah — PhD student in Mechanical Engineering at Rochester Institute of Technology. Fluid–structure interaction, bio-inspired flow sensing, and scientific machine learning (neural operators and surrogates)."
 />
 <meta name="author" content="J.K. Sah" />
 
@@ -14,7 +14,7 @@
 <meta property="og:title" content="J.K. Sah — Portfolio" />
 <meta
   property="og:description"
-  content="PhD researcher in Mechanical Engineering, RIT. Flow physics, fluid–structure interaction, bio-inspired sensing, physics-informed ML."
+  content="PhD researcher in Mechanical Engineering, RIT. Fluid–structure interaction, bio-inspired sensing, scientific machine learning. Open to MS/PhD research assistantships."
 />
 <meta property="og:image" content="https://jk-sah.github.io/assets/profile.jpg" />
 <meta property="og:image:secure_url" content="https://jk-sah.github.io/assets/profile.jpg" />
@@ -28,7 +28,7 @@
 <meta name="twitter:title" content="J.K. Sah — Portfolio" />
 <meta
   name="twitter:description"
-  content="PhD researcher in Mechanical Engineering, RIT. Flow physics, fluid–structure interaction, bio-inspired sensing, physics-informed ML."
+  content="PhD researcher in Mechanical Engineering, RIT. Fluid–structure interaction, bio-inspired sensing, scientific machine learning. Open to MS/PhD research assistantships."
 />
 <meta name="twitter:image" content="https://jk-sah.github.io/assets/profile.jpg" />
 
@@ -79,11 +79,14 @@
         <p class="hero__eyebrow">PhD Student · Mechanical Engineering</p>
         <h1 class="hero__name"><span class="hero__name-alt">J.K.</span> Sah</h1>
         <p class="hero__tagline">
-          Building bio-inspired sensors that let machines
-          <strong>feel the flow</strong> — experimental
-          <strong>fluid–structure interaction</strong>, embedded
-          <strong>sensor arrays</strong>, and
-          <strong>machine learning</strong> for autonomous underwater sensing.
+          I work on <strong>fluid–structure interaction</strong> and the
+          <strong>machine-learning models</strong> built for it: bio-inspired
+          flow sensors for underwater vehicles, and neural surrogates tested
+          against strong classical solvers.
+        </p>
+        <p class="hero__status">
+          <span class="hero__status-dot" aria-hidden="true"></span>
+          Open to graduate research assistantships (MS or PhD) for 2027
         </p>
         <p class="hero__affil">
           Graduate Research Assistant ·
@@ -147,12 +150,26 @@
             <a href="https://www.rit.edu/directory/qxxeme-qian-xue" target="_blank" rel="noopener">Dr. Qian Xue</a>.
           </p>
           <p>
-            My work is <strong>hands-on and experimental</strong>: I design, build, and
-            test embedded sensor arrays and data-acquisition systems for
-            <strong>autonomous underwater detection and tracking</strong>, inspired by
-            how seals use their whiskers to sense wakes. I pair towing-tank flow
-            experiments with <strong>machine-learning analysis</strong> of sensor data to
-            decode whisker–wake interaction.
+            My work splits between the lab and the cluster. In the lab I build
+            seal-whisker sensor arrays and their data-acquisition hardware, run
+            towing-tank experiments, and train models that read a wake from the
+            whisker signals. On the computational side I build and benchmark
+            <strong>learned models for mechanics</strong>: neural operators for
+            elasticity, surrogates for oscillatory flows, and spiking decoders for
+            lateral-line-style sensing.
+          </p>
+          <p>
+            The question I keep coming back to is whether a learned model actually
+            beats a well-tuned classical method once training, data and inference
+            are all counted. Sometimes it does. In my elasticity benchmark, finite
+            elements and reduced-order models won on both linear problems.
+          </p>
+          <p>
+            Before RIT I spent about two and a half years in Nepal and Japan on
+            industrial energy audits, solar monitoring and mechanical design. That
+            thread continues in my recent <em>Journal of Cleaner Production</em>
+            review of when carbonation-cured concrete actually lowers CO<sub>2</sub>
+            emissions.
           </p>
           <p class="about__thesis">
             <span>Dissertation</span>
@@ -181,30 +198,30 @@
         <h2>Research</h2>
       </div>
       <p class="section__intro">
-        Experimental fluid–structure interaction and bio-inspired flow sensing —
-        from sensor hardware and towing-tank experiments to the machine-learning
-        pipelines that turn raw signals into motion state.
+        I split my time between the towing tank and the compute cluster. Across
+        these projects I try to test each new method against the strongest
+        baseline I can build, and to count all of its costs.
       </p>
       <div class="cards">
         <article class="card">
+          <div class="card__icon">🧠</div>
+          <h3>Neural Operators &amp; Surrogates</h3>
+          <p>Benchmarking DeepONet and Fourier neural operators against FEM and reduced-order models for 2D elasticity, and studying why neural surrogates of oscillatory flows drift in phase over long rollouts.</p>
+        </article>
+        <article class="card">
           <div class="card__icon">🦭</div>
           <h3>Bio-Inspired Flow Sensing</h3>
-          <p>Translating how seals sense hydrodynamic trails with their whiskers into engineered sensor arrays for underwater detection and tracking.</p>
+          <p>Seal-whisker sensor arrays for underwater detection and tracking: a 32-channel DAQ, towing-tank tests of whisker–wake interaction, and CNN–LSTM models that map whisker signals to motion state.</p>
         </article>
         <article class="card">
-          <div class="card__icon">🔧</div>
-          <h3>Embedded Sensor Arrays</h3>
-          <p>A 32-channel whisker-array DAQ system (24-bit ΔΣ ADCs over SPI), released as a Python package for synchronized logging and visualization.</p>
+          <div class="card__icon">⚡</div>
+          <h3>Spiking Decoders for Flow</h3>
+          <p>Low-energy spiking neural networks that decode lateral-line-style sensor arrays, with ablations that test what the fish's two receptor pathways each contribute.</p>
         </article>
         <article class="card">
-          <div class="card__icon">🌊</div>
-          <h3>Whisker–Wake Interaction</h3>
-          <p>Towing-tank experiments and a frequency-domain pipeline that separates whisker self-vibration from wake-induced forcing.</p>
-        </article>
-        <article class="card">
-          <div class="card__icon">🧠</div>
-          <h3>Machine Learning for Physics</h3>
-          <p>CNN–LSTM models mapping multi-channel deflection signals to hydrodynamic motion state; physics-informed neural operators (DeepONet).</p>
+          <div class="card__icon">🌱</div>
+          <h3>Low-Carbon Materials &amp; Energy</h3>
+          <p>Life-cycle evidence on CO<sub>2</sub> mineralization in cement-based products, and earlier work on building and industrial energy efficiency in Nepal.</p>
         </article>
       </div>
     </div>
@@ -330,6 +347,11 @@
       <h3 class="pubs__group">Peer-Reviewed Journal Articles</h3>
       <ol class="pubs">
         <li class="pub">
+          <p class="pub__title">When is carbonation-cured concrete actually cleaner? A systematic review, a net-benefit condition framework, and a proposed minimum reporting set for CO<sub>2</sub> mineralization in cement-based products</p>
+          <p class="pub__authors"><strong>Sah, J. K.</strong></p>
+          <p class="pub__meta"><em>Journal of Cleaner Production</em>, 579, 149605 · 2026 · <a href="https://doi.org/10.1016/j.jclepro.2026.149605" target="_blank" rel="noopener">doi:10.1016/j.jclepro.2026.149605</a></p>
+        </li>
+        <li class="pub">
           <p class="pub__title">Energy intensity improvement potential of the commercial buildings in developing countries: A case study of Nepal</p>
           <p class="pub__authors">Shakya, S. R., <strong>Sah, J. K.</strong>, Bhujel, P., Aryal, H., Bajracharya, T. R., Bhandari, R., Subedi, S., &amp; Chaulagain, B.</p>
           <p class="pub__meta"><em>Journal of Innovations in Engineering Education</em>, 7(1), 84–95 · 2024</p>
@@ -348,6 +370,15 @@
           <p class="pub__title">Design Optimization of Fins of a Sounding Rocket for Maximum Lift-to-Drag Ratio and Minimum Radar Cross-Section Area Using ANSYS</p>
           <p class="pub__authors">Shah, M. P., &amp; <strong>Sah, J. K.</strong></p>
           <p class="pub__meta"><em>International Journal on Engineering Technology</em>, 1(1), 53–61 · 2023</p>
+        </li>
+      </ol>
+
+      <h3 class="pubs__group">Manuscripts Under Revision</h3>
+      <ol class="pubs">
+        <li class="pub">
+          <p class="pub__title">Do neural operators beat classical solvers for linear elasticity? A strong-baseline, full-cost benchmark</p>
+          <p class="pub__authors"><strong>Sah, J. K.</strong></p>
+          <p class="pub__meta"><em>Computational Mechanics</em> (Springer) · Under revision</p>
         </li>
       </ol>
 
@@ -452,8 +483,9 @@
       </div>
       <div class="contact">
         <p class="contact__lead">
-          Interested in bio-inspired sensing, experimental fluid–structure
-          interaction, or ML for flow data? I'd be glad to connect.
+          I'm looking for a graduate research assistantship (MS or PhD) starting
+          in 2027. If your group works on fluid–structure interaction, scientific
+          machine learning, or bio-inspired sensing, I'd like to hear from you.
         </p>
         <div class="contact__links">
           <a class="contact__card" href="mailto:js8472@rit.edu">

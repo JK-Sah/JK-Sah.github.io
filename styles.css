@@ -132,6 +132,14 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: 500; line-height: 1.15
 .hero__tagline { font-size: clamp(17px, 2.4vw, 21px); color: var(--text-soft); margin: 0 0 18px; max-width: 34ch; }
 .hero__tagline strong { color: var(--text); font-weight: 600; }
 .hero__affil { font-size: 15px; color: var(--text-mute); margin: 0 0 28px; }
+.hero__status {
+  display: inline-flex; align-items: center; gap: 8px; margin: 0 0 18px;
+  padding: 6px 12px; border-radius: 999px; background: var(--accent-soft);
+  color: var(--accent-ink); font-size: 14px; font-weight: 500; line-height: 1.35;
+}
+.hero__status-dot {
+  flex: 0 0 auto; width: 8px; height: 8px; border-radius: 50%; background: var(--accent);
+}
 
 .hero__cta { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 28px; }
 .btn {
