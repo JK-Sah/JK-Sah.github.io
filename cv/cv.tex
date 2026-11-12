@@ -21,13 +21,15 @@
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{3em}% lets a line loosen instead of overflowing
 \pagestyle{plain}
 
 % Section headings: blue sans-serif with a light rule underneath
 \titleformat{\section}{\large\sffamily\bfseries\color{ink}}{}{0em}{}[\vspace{-2pt}{\color{rulecol}\titlerule}]
 \titlespacing*{\section}{0pt}{8pt}{3pt}
 
-\setlist[itemize]{leftmargin=1.2em,label=\textbullet,nosep,topsep=1pt}
+% ragged-right bullets avoid stretched word spacing
+\setlist[itemize]{leftmargin=1.2em,label=\textbullet,nosep,topsep=1pt,before=\raggedright}
 
 % \entry{title}{dates}{organization}{location}
 \newcommand{\entry}[4]{\textbf{#1}\hfill #2\par\textit{#3}\hfill\textit{#4}\par}
@@ -66,13 +68,13 @@
 \entry{Ph.D., Mechanical Engineering}{Jan 2026 -- Present}{Rochester Institute of Technology, Kate Gleason College of Engineering}{Rochester, NY}
 \begin{itemize}
   \item \textbf{GPA:} 4.0/4.0 (to date)
-  \item \textbf{Research project:} \textit{From Nature to Prototype: Development of a Bio-Inspired Seal Whisker Sensor Array}
+  \item \textbf{Research project:} \textit{From Nature to Prototype: Development of a Bio-Inspired Seal Whisker Sensor Array} \mbox{(Supervisor: Dr.~Qian Xue)}
   \item \textbf{Coursework:} Computational Methods in Fluid Dynamics, Continuum Mechanics, Advanced Engineering Mathematics, Engineering Analysis, Interdisciplinary Research Methods, Translating Discovery into Practice, Doctoral Seminar
 \end{itemize}
 \entry{B.E., Mechanical Engineering}{Nov 2018 -- Apr 2023}{Pulchowk Campus, Institute of Engineering, Tribhuvan University}{Kathmandu, Nepal}
 \begin{itemize}
   \item \textbf{Overall score:} 76.36/100; merit-based full scholarship for undergraduate study.
-  \item \textbf{Thesis:} Study of the energy scenario and improvement opportunities of the ICT building, Pulchowk Campus.
+  \item \textbf{Thesis:} Study of the energy scenario and improvement opportunities of the ICT building, Pulchowk Campus \mbox{(Supervisor: Dr.~Shree Raj Shakya).}
 \end{itemize}
 \vspace{2pt}\textbf{English proficiency:} IELTS 7.0/9.0\par
 
@@ -80,13 +82,13 @@
 \section*{Research Experience}
 \entry{Graduate Research Assistant}{Jan 2026 -- Present}{Department of Mechanical Engineering, Rochester Institute of Technology}{Rochester, NY}
 \begin{itemize}
-  \item Ran \textbf{towing-tank experiments} with a 9-sensor seal-whisker array on a moving carriage behind an independently towed cylinder (Re = 4000, 6000 and 8000); the measured shedding frequency scaled linearly with tow speed.
-  \item Repaired a \textbf{32-channel sensor board} and rewrote its ESP32 firmware, recovering 14 of 16 whisker sensors.
-  \item Assembled and ballasted a \textbf{BlueROV2} as the underwater test vehicle and ran its first towing-tank tests.
+  \item Conducted towing-tank experiments with bio-inspired seal-whisker sensor arrays for underwater wake sensing.
+  \item Debugged multi-channel sensor electronics and developed embedded firmware for data collection.
+  \item Assembled and tested an underwater robotic vehicle as the platform for in-water sensor trials.
 \end{itemize}
 \entry{Research Assistant}{Apr 2023 -- Mar 2024}{Center for Energy Studies, Institute of Engineering, Tribhuvan University}{Lalitpur, Nepal}
 \begin{itemize}
-  \item Contributed to 25+ solar-monitoring projects and energy audits of industrial sites (Supervisor: Dr.\ Shree Raj Shakya).
+  \item Contributed to 25+ solar-monitoring projects and energy audits of industrial sites.
   \item Research focus: national energy-intensity assessment, wind-energy potential for water pumping, and industrial sustainability-index calculation.
 \end{itemize}
 
