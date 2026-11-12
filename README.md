@@ -1,8 +1,8 @@
 # JK-Sah.github.io
 
-Personal academic website of **J.K. Sah** — PhD student in Mechanical Engineering at the Rochester Institute of Technology, working in the [Flow Physics & Modeling Lab](https://www.rit.edu/fpml/) under Prof. Qian Xue.
+Personal academic website of **J.K. Sah**, mechanical engineering researcher.
 
-Built with plain HTML, CSS, and vanilla JavaScript — no build step, no dependencies. Deploys directly to **GitHub Pages**.
+Built with plain HTML, CSS, and vanilla JavaScript, with no build step or dependencies. Deploys directly to **GitHub Pages**.
 
 ## Project structure
 
