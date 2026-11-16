@@ -134,7 +134,7 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: 500; line-height: 1.15
 .nowrap { white-space: nowrap; }
 .hero__facts {
   list-style: none; padding: 0; margin: 6px 0 30px;
-  display: grid; grid-template-columns: repeat(4, auto); justify-content: start;
+  display: grid; grid-template-columns: repeat(3, auto); justify-content: start;
 }
 .hero__facts li {
   display: flex; flex-direction: column; gap: 2px;
